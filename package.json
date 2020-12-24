@@ -20,7 +20,7 @@
     "deploy": "npm run build && ./publicpathfix.sh && gh-pages -d dist/"
   },
   "dependencies": {
-    "phaser": "^3.50.0"
+    "phaser": "^3.50.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
