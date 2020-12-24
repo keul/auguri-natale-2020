@@ -33,7 +33,7 @@ const LEVEL_SELECTION = {
   },
   castle: {
     title: "L'Attenzione",
-    abstract: 'Dove Marco dovrà mostrare di ascoltare suo padre',
+    abstract: 'Dove Marco dovrà mostrare di conoscere la storia',
     preload: preload2,
     create: create2,
     update: update,
@@ -508,7 +508,7 @@ async function create1() {
     if (score === 13) {
       scoreText.setText('Livello 1 Completato!');
       setTimeout(() => {
-        window.location.href = '/?level=castle';
+        window.location.href = window.location.pathname + '?level=castle';
       }, 5000);
     } else {
       scoreText.setText('Stelle toccate: ' + score);
@@ -659,7 +659,7 @@ async function create2() {
       this.physics.add.collider(player, platforms);
       missionText.setText('Livello 2 Completato!');
       setTimeout(() => {
-        window.location.href = '/?level=final';
+        window.location.href = window.location.pathname + '?level=final';
       }, 5000);
     }
   });
@@ -853,7 +853,7 @@ async function create3() {
     if (now.getTime() > future.getTime() || window.SKIP_TIME) {
       missionText.setText('Livello 3 Completato!\n(Non è che hai barato, vero?)');
       setTimeout(() => {
-        window.location.href = '/?level=victory';
+        window.location.href = window.location.pathname + '?level=victory';
       }, 5000);
       baloonText.setText('HOORAY! LE TIME!!!!'.replace('TIME', getCurrentTime(now)));
 
